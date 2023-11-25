@@ -1,0 +1,64 @@
+.sk-collapse {
+  --sk-collapse-border-color: var(--sk-border-color-light);
+  --sk-collapse-header-height: 48px;
+  --sk-collapse-header-bg-color: var(--sk-fill-color-blank);
+  --sk-collapse-header-text-color: var(--sk-text-color-primary);
+  --sk-collapse-header-font-size: 13px;
+  --sk-collapse-content-bg-color: var(--sk-fill-color-blank);
+  --sk-collapse-content-font-size: 13px;
+  --sk-collapse-content-text-color: var(--sk-text-color-primary);
+  --sk-collapse-disabled-text-color: var(--sk-disabled-text-color);
+  --sk-collapse-disabled-border-color: var(--sk-border-color-lighter);
+  border-top: 1px solid var(--sk-collapse-border-color);
+  border-bottom: 1px solid var(--sk-collapse-border-color);
+}
+
+.sk-collapse-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--sk-collapse-header-height);
+  line-height: var(--sk-collapse-header-height);
+  background-color: var(--sk-collapse-header-bg-color);
+  color: var(--sk-collapse-header-text-color);
+  cursor: pointer;
+  font-size: var(--sk-collapse-header-font-size);
+  font-weight: 500;
+  transition: border-bottom-color var(--sk-transition-duration);
+  outline: none;
+  border-bottom: 1px solid var(--sk-collapse-border-color);
+
+  &.is-disabled {
+    color: var(--sk-collapse-disabled-text-color);
+    cursor: not-allowed;
+    background-image: none;
+  }
+
+  &.is-active {
+    border-bottom-color: transparent;
+
+    .header-angle {
+      transform: rotate(90deg);
+    }
+  }
+
+  .header-angle {
+    transition: transform var(--sk-transition-duration);
+  }
+}
+
+.sk-collapse-item__content {
+  will-change: height;
+  background-color: var(--sk-collapse-content-bg-color);
+  overflow: hidden;
+  box-sizing: border-box;
+  font-size: var(--sk-collapse-content-font-size);
+  color: var(--sk-collapse-content-text-color);
+  border-bottom: 1px solid var(--sk-collapse-border-color);
+  padding-bottom: 25px;
+}
+
+.slide-enter-active, .slide-leave-active {
+  transition: height var(--sk-transition-duration);
+}
+
