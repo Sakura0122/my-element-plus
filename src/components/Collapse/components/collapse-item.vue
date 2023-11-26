@@ -2,6 +2,7 @@
 import type { CollapseItemProps } from '@/components/Collapse/types'
 import { computed, inject } from 'vue'
 import { collapseContextKey } from '@/components/Collapse/types'
+import SkIcon from '@/components/Icon/index.vue'
 
 defineOptions({ name: 'SkCollapseItem' })
 
@@ -52,6 +53,7 @@ const transitionEvents: Record<string, (el: HTMLElement) => void> = {
       @click="handleClick"
     >
       <slot name="title">{{ title }}</slot>
+      <sk-icon icon="angle-right" class="header-angle" />
     </div>
     <Transition name="slide" v-on="transitionEvents">
       <div class="sk-collapse-item__wrapper" v-show="isActive">

@@ -1,0 +1,16 @@
+.sk-icon {
+  --sk-icon-color: inherit;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  fill: currentColor;
+  color: var(--sk-icon-color);
+  font-size: inherit;
+}
+
+@each $val in primary,info,success,warning,danger {
+  .sk-icon--$(val) {
+    --sk-icon-color: var(--sk-color-$(val));
+  }
+}
