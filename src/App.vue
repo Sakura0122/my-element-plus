@@ -3,6 +3,7 @@ import MainButton from '@/views/main-button.vue'
 import MainCollapse from '@/views/main-collapse.vue'
 import MainIcon from '@/views/main-icon.vue'
 import MainAlert from '@/views/main-alert.vue'
+import MainTooltip from '@/views/main-tooltip.vue'
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import MainAlert from '@/views/main-alert.vue'
   <main-collapse />
   <main-icon />
   <main-alert />
+  <main-tooltip />
 </template>
 
 <style scoped></style>
