@@ -4,6 +4,7 @@ import MainCollapse from '@/views/main-collapse.vue'
 import MainIcon from '@/views/main-icon.vue'
 import MainAlert from '@/views/main-alert.vue'
 import MainTooltip from '@/views/main-tooltip.vue'
+import MainDropdown from '@/views/main-dropdown.vue'
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import MainTooltip from '@/views/main-tooltip.vue'
   <main-icon />
   <main-alert />
   <main-tooltip />
+  <main-dropdown />
 </template>
 
 <style scoped></style>
