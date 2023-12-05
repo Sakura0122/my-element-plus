@@ -5,6 +5,7 @@ import MainIcon from '@/views/main-icon.vue'
 import MainAlert from '@/views/main-alert.vue'
 import MainTooltip from '@/views/main-tooltip.vue'
 import MainDropdown from '@/views/main-dropdown.vue'
+import MainMessage from '@/views/main-message.vue'
 </script>
 
 <template>
@@ -14,6 +15,7 @@ import MainDropdown from '@/views/main-dropdown.vue'
   <main-alert />
   <main-tooltip />
   <main-dropdown />
+  <main-message />
 </template>
 
 <style scoped></style>
